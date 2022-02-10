@@ -9,7 +9,7 @@ const searchlog = require('./searchlog.js')
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
+app.get('/LogAn', (req, res) => {
   res.send('<!DOCTYPE html>\
 <html>\
 <body>\
