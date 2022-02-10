@@ -8,9 +8,8 @@ async function readLog(filePath, chunkSize, lineNumber) {
   let linesRead = 0;
 
   for await(const line of generateLines(filePath, chunkSize)) {
-    const data = line.toString('utf8');
     if (lineNumber - 1 == linesRead) {
-      return data;
+      return line.toString('utf8');
     }
     linesRead++;
   }
